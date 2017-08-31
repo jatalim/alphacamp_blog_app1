@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+	def index
+		@posts = Post.all 
 	def home
 	home = Viewcounter.find_by(page_name: "home")
 	home.view_count +=1
